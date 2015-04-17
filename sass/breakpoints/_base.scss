@@ -1,0 +1,291 @@
+/*********************
+GENERAL STYLES
+*********************/
+// Genesis layout <body> classes:
+// .content-sidebar-sidebar
+// .sidebar-content-sidebar
+// .sidebar-sidebar-content
+// .content-sidebar
+// .sidebar-content
+// .full-width-content
+
+.site-container {
+}
+
+.content-sidebar-wrap {
+	@extend %clearfix;
+}
+
+.content {
+}
+
+.sidebar-primary {
+}
+
+.sidebar-secondary {
+}
+
+/*********************
+HEADINGS
+*********************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
+}
+
+
+/*********************
+HEADER
+*********************/
+.site-header {
+
+	> .wrap {
+	}
+}
+
+.title-area {
+	float: left;
+}
+
+.site-title,
+.site-description {
+	margin: 0;
+	line-height: 1;
+
+	.header-image & {
+		@extend %image-replacement;
+		display: block;
+	}
+}
+
+.site-title {
+	line-height: 1;
+
+	a {
+
+		&:hover,
+		&:focus,
+		&:active {
+		}
+	}
+}
+
+.header-widget-area {
+	float: right;
+
+	.widget {
+	}
+}
+
+/*********************
+NAVIGATION
+*********************/
+.genesis-nav-menu {
+	@extend %clearfix;
+	width: 100%;
+
+	// Applied to all menu <li>s
+	.menu-item {
+
+		a {
+			position: relative;
+			display: block;
+		}
+	}
+
+	// First level
+	> .menu-item {
+		position: relative;
+		display: inline-block;
+		text-align: left;
+
+		&:hover,
+		&:focus,
+		&:active,
+		&.sfHover {
+
+			> .sub-menu {
+				left: auto;
+				opacity: 1;
+			}
+		}
+
+		&.current-menu-item {
+
+			> a {
+			}
+		}
+
+		> a {
+		}
+	}
+
+	// Sublevels
+	.sub-menu {
+		position: absolute;
+		top: 100%;
+		left: -9999px;
+		z-index: 99;
+		opacity: 0;
+		transition: opacity .4s ease-in-out;
+
+		> .menu-item {
+
+			> a {
+				position: relative;
+			}
+		}
+
+		.sub-menu {
+		}
+	}
+}
+
+/*********************
+CONTENT
+*********************/
+.breadcrumbs {
+}
+
+.entry-title {
+	overflow: hidden;
+	word-break: break-word;
+
+	a {
+		color: inherit;
+
+		&:hover,
+		&:focus,
+		&:active {
+		}
+	}
+}
+
+.archive-title {
+}
+
+.entry-content {
+
+	p {
+		@extend %type;
+	}
+
+	ol,
+	ul {
+		@extend %type;
+		padding-left: 2.5em;
+
+		ol,
+		ul {
+			margin-bottom: .5em;
+			padding-left: 1.5em;
+		}
+	}
+
+	ol {
+
+		li {
+			list-style-type: decimal;
+		}
+	}
+
+	ul {
+
+		li {
+			list-style-type: disc;
+		}
+	}
+
+	blockquote {
+
+		p {
+		}
+	}
+}
+
+.entry-pagination {
+}
+
+.entry-meta {
+	clear: both;
+
+	.entry-header & {
+	}
+
+	.entry-footer & {
+	}
+
+	.entry-categories,
+	.entry-tags {
+	}
+}
+
+.archive-pagination {
+	clear: both;
+
+	a {
+	}
+
+	li {
+		display: inline;
+
+		a {
+
+			&:hover,
+			&:focus,
+			&:active {
+			}
+		}
+
+		&.pagination-omission {
+		}
+
+		&.active {
+
+			a {
+			}
+		}
+	}
+}
+
+/*********************
+SIDEBARS
+*********************/
+.sidebar {
+
+	.widget {
+	}
+
+	.widgettitle {
+	}
+}
+
+/*********************
+FOOTER
+*********************/
+.footer-widgets {
+	@extend %clearfix;
+
+	> .wrap {
+	}
+
+	.widget {
+	}
+
+	.widgettitle {
+	}
+}
+
+.site-footer {
+
+	> .wrap {
+	}
+}
+
+
